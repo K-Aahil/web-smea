@@ -14,9 +14,38 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages/home');
 });
 
-Route::get('/main', function () {
-    return view('main');
+Route::get('/sambutan', function () {
+    return view('pages/sambutan');
 });
+
+Route::get('/tentang', function () {
+    return view('pages/tentang');
+});
+
+Route::get('/struktur', function () {
+    return view('pages/struktur');
+});
+
+Route::get('/komite', function () {
+    return view('pages/komite');
+});
+
+Route::get('/kompetensi-keahlian', function () {
+    return view('pages/major');
+});
+
+Route::get('/ekstrakulikuler', function () {
+    return view('pages/ekstrakulikuler');
+});
+
+Route::get('/informasi-kurikulum', function () {
+    return view('pages/kurikulum');
+});
+
+Route::get('/bkk', function () {
+    return view('pages/bkk');
+});
+
