@@ -1,5 +1,5 @@
- <header class="bg-red-100">
-     <nav class="lg:h-[60px] bg-[#004C77] border-gray-200 dark:bg-gray-900 dark:border-gray-700 drop-shadow-lg">
+ <header>
+     <nav class="hidden h-[30px] lg:h-[60px] bg-[#004C77] drop-shadow-lg lg:block">
          <div class="max-w-screen-xl flex flex-wrap justify-end lg:mx-[165px] p-4">
              <ul class="flex text-white gap-5">
                  <li class="flex items-center gap-2">
