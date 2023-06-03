@@ -44,8 +44,3 @@ Route::get('/ekstrakulikuler', function () {
 Route::get('/informasi-kurikulum', function () {
     return view('pages/kurikulum');
 });
-
-Route::get('/bkk', function () {
-    return view('pages/bkk');
-});
-
