@@ -12,8 +12,8 @@
                 <div class="swiper-slide relative flex items-center">
                     <div
                         class=" slide-image after:absolute after:left-0 after:top-0 after:w-full after:h-full after:bg-gradient-to-r after:from-blue-500 after:via-slate-200 after:to-orange-400 after:opacity-20 after:transition-all after:duration-300 relative w-[320px] h-[280px] flex-shrink-0 rounded-[20px] mr-[20px] overflow-hidden">
-                        <img class=" object-cover block opacity-0 transition-all duration-300" src="images/video.png"
-                            alt="">
+                        <img class="w-[37rem] h-[42rem] object-cover block opacity-0 transition-all duration-300"
+                            src="images/video.png" alt="">
                     </div>
                     <div class="slide-content pr-[25px]">
                         <div
