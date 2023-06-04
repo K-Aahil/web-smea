@@ -47,40 +47,40 @@
                              <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
                                  aria-labelledby="dropdownLargeButton">
                                  <li>
-                                     <a href="sambutan"
+                                     <a href="/sambutan"
                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                          Prakata Kepala Sekolah</a>
                                  </li>
                                  <li>
-                                     <a href="tentang"
+                                     <a href="/tentang"
                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sejarah,
                                          Visi, dan Misi</a>
                                  </li>
                                  <li>
-                                     <a href="struktur"
+                                     <a href="/struktur"
                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Struktur
                                          Organisasi</a>
                                  </li>
                                  <li>
-                                     <a href="komite"
+                                     <a href="/komite"
                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Komite</a>
                                  </li>
                                  <li>
-                                     <a href="kompetensi-keahlian"
+                                     <a href="/kompetensi-keahlian"
                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kompetensi
                                          Keahlian</a>
                                  </li>
                                  <li>
-                                     <a href="ekstrakulikuler"
+                                     <a href="/ekstrakulikuler"
                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Ekstrakulikuler</a>
                                  </li>
                                  <li>
-                                     <a href="informasi-kurikulum"
+                                     <a href="/informasi-kurikulum"
                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Informasi
                                          Kurikulum</a>
                                  </li>
                                  <li>
-                                     <a href="bkk"
+                                     <a href="#"
                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Bursa
                                          Kerja Khusus</a>
                                  </li>
@@ -98,12 +98,12 @@
                              <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
                                  aria-labelledby="dropdownLargeButton">
                                  <li>
-                                     <a href="#"
+                                     <a href="/tenaga-pendidik"
                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tenaga
                                          Pendidik</a>
                                  </li>
                                  <li>
-                                     <a href="#"
+                                     <a href="/tata-usaha"
                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Staf
                                          Tata Usaha</a>
                                  </li>
@@ -121,12 +121,12 @@
                              <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
                                  aria-labelledby="dropdownLargeButton">
                                  <li>
-                                     <a href="#"
+                                     <a href="/berita-sekolah"
                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Berita
                                          Sekolah</a>
                                  </li>
                                  <li>
-                                     <a href="#"
+                                     <a href="/galeri"
                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Galeri</a>
                                  </li>
                              </ul>

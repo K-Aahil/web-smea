@@ -1,4 +1,4 @@
-<footer class="footer py-[75px] px-10 lg:py-[100px] lg:px-[165px] bg-[#004C77] text-white lg:mt-[100px]">
+<footer class="footer py-[75px] px-10 lg:py-[100px] lg:px-[165px] bg-[#004C77] text-white">
     <div class="lg:max-w-[265px]">
         <img class="lg:w-[177px] w-[170px]" src="images/logo.png" alt="">
         <p class="lg:text-[24px] text-[20px] font-[600] lg:mt-[30px]">SMK Negeri 1 Garut.</p>
