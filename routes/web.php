@@ -44,3 +44,19 @@ Route::get('/ekstrakulikuler', function () {
 Route::get('/informasi-kurikulum', function () {
     return view('pages/kurikulum');
 });
+
+Route::get('/tenaga-pendidik', function () {
+    return view('pages/pendidik');
+});
+
+Route::get('/tata-usaha', function () {
+    return view('pages/tu');
+});
+
+Route::get('/berita-sekolah', function () {
+    return view('pages/berita');
+});
+
+Route::get('/galeri', function () {
+    return view('pages/galeri');
+});

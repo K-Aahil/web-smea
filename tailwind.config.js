@@ -24,10 +24,16 @@ export default {
             opacity: "0",
           },
         },
+        carousel: {
+          "100%": {
+            transform: "translateX(-400px)",
+          },
+        },
       },
       animation: {
         pulse: "pulse 2s ease-out infinite",
         "pulse-delay": "pulse 2s 1s ease-out infinite",
+        carousel: "carousel 4s linear infinite",
       },
       scale: {
         "-100": "-1",

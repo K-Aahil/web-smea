@@ -41,3 +41,20 @@ var swiper = new Swiper(".eXSwiperMobile", {
     dynamicBullets: true,
   },
 });
+
+var swiper = new Swiper(".slider", {
+  spaceBetween: 30,
+  effect: "fade",
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  mousewheel: {
+    invert: false,
+  },
+  pagination: {
+    el: ".slide-pagination",
+    clickable: true,
+  },
+});
