@@ -3,11 +3,11 @@
          <div class="max-w-screen-xl flex flex-wrap justify-end lg:mx-[165px] p-4">
              <ul class="flex text-white gap-5">
                  <li class="flex items-center gap-2">
-                     <img src="icons/email.svg" class="h-12 lg:w-[25px] lg:h-[25px]" alt="" />
+                     <img src="/icons/email.svg" class="h-12 lg:w-[25px] lg:h-[25px]" alt="" />
                      <p>smkn1garut@ymail.com</p>
                  </li>
                  <li class="flex items-center gap-2">
-                     <img src="icons/phone.svg" class="h-12 lg:w-[25px] lg:h-[25px]" alt="" />
+                     <img src="/icons/phone.svg" class="h-12 lg:w-[25px] lg:h-[25px]" alt="" />
                      <p>(0262) 233316</p>
                  </li>
              </ul>
@@ -16,7 +16,7 @@
      <nav class="lg:h-[100px] bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700 drop-shadow-lg">
          <div class="max-w-screen-xl flex flex-wrap items-center justify-between lg:mx-[165px] p-4">
              <a href="/" class="flex items-center">
-                 <img src="images/logo.png" class="h-12 lg:w-[72px] lg:h-[72px]" alt="Logo" />
+                 <img src="/images/logo.png" class="h-12 lg:w-[72px] lg:h-[72px]" alt="Logo" />
              </a>
              <button data-collapse-toggle="navbar-dropdown" type="button"
                  class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -40,7 +40,7 @@
                          <button id="hs-mega-menu-basic-dr" type="button"
                              class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
                              Profil
-                             <img src="icons/dropdown.svg" alt="" class="pl-2">
+                             <img src="/icons/dropdown.svg" alt="" class="pl-2">
                          </button>
                          <div
                              class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
@@ -91,7 +91,7 @@
                          <button id="hs-mega-menu-basic-dr" type="button"
                              class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
                              Staf dan Pendidik
-                             <img src="icons/dropdown.svg" alt="" class="pl-2">
+                             <img src="/icons/dropdown.svg" alt="" class="pl-2">
                          </button>
                          <div
                              class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
@@ -114,14 +114,14 @@
                          <button id="hs-mega-menu-basic-dr" type="button"
                              class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
                              Kegiatan Sekolah
-                             <img src="icons/dropdown.svg" alt="" class="pl-2">
+                             <img src="/icons/dropdown.svg" alt="" class="pl-2">
                          </button>
                          <div
                              class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
                              <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
                                  aria-labelledby="dropdownLargeButton">
                                  <li>
-                                     <a href="/berita-sekolah"
+                                     <a href="/berita"
                                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Berita
                                          Sekolah</a>
                                  </li>
@@ -136,7 +136,7 @@
                          <button id="hs-mega-menu-basic-dr" type="button"
                              class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
                              Teaching Factory
-                             <img src="icons/dropdown.svg" alt="" class="pl-2">
+                             <img src="/icons/dropdown.svg" alt="" class="pl-2">
                          </button>
                          <div
                              class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">

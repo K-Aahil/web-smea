@@ -146,16 +146,20 @@
             </div>
             <div class="swiper majorSwiper mt-[75px] pb-[100px] hidden lg:block">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide card lg:w-[269px] lg:h-[332px] bg-white shadow-xl items-center justify-center">
-                        <a href="">
-                            <img class="w-[200px] h-[190px] mt-[39px]" src="images/major/sij.png" alt="" />
-                            <a class="items-center text-center" href="">
-                                <p class="card-title mt-[18px] mb-[30px] px-[12px]">Pengembangan Perangkat Lunak dan
-                                    Gim
-                                </p>
+                    @foreach ($jurusan as $major)
+                        <div
+                            class="swiper-slide card lg:w-[269px] lg:h-[332px] bg-white shadow-xl items-center justify-center">
+                            <a href="">
+                                <img class="w-[200px] h-[190px] mt-[39px]" src="images/major/sij.png" alt="" />
+                                <a class="items-center text-center" href="/kompetensi-keahlian/{{ $major->name }}">
+                                    <p class="card-title mt-[18px] mb-[30px] px-[12px]">
+                                        {{ $major->created_at->translatedFormat('H:i:s') }}
+                                    </p>
+                                </a>
                             </a>
-                        </a>
-                    </div>
+                            {{--  --}}
+                        </div>
+                    @endforeach
                 </div>
             </div>
             <div class="swiper majorSwiperMobile mt-[50px] pb-[115px] lg:hidden">
@@ -188,7 +192,7 @@
                     <div class="hidden lg:inline w-[36px] h-[3px] bg-white"></div>
                 </div>
                 <div class="flex justify-between items-center mt-6 relative">
-                    <p class="lg:w-[910px] font-inter text-[16px] text-[#F7F1F1] font-[400] lg:text-[24px]">
+                    <p class="lg:w-[910px] text-left font-inter text-[16px] text-[#F7F1F1] font-[400] lg:text-[24px]">
                         Kami memiliki 10 Selain Kompetensi Keahlian, ada lebih dari 35 Ekstrakulikuler yang dapat
                         dipilih berdasarkan minat serta bakat yang dimiliki.
                     </p>
@@ -205,19 +209,24 @@
                 </div>
             </div>
 
+            {{-- Slider Desktop --}}
             <div class="swiper eXSwiper mt-[47px] pb-[100px] hidden lg:block">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide card lg:w-[210px] lg:h-[230px] bg-white shadow-xl items-center justify-cente">
-                        <a class="" href="">
-                            <img class="w-[160px] h-[135px] mt-[30px]" src="images/major/sij.png" alt="" />
-                            <a class="items-center text-center" href="">
-                                <p class="card-title mt-[18px]">SIJA</p>
+                    @foreach ($ekskul as $item)
+                        <div
+                            class="swiper-slide card lg:w-[210px] lg:h-[230px] bg-white shadow-xl items-center justify-cente">
+                            <a class="" href="/ekstrakulikuler/{{ $item->name }}">
+                                <img class="w-[160px] h-[135px] mt-[30px]" src="images/major/sij.png" alt="" />
+                                <a class="items-center text-center" href="/ekstrakulikuler/{{ $item->name }}">
+                                    <p class="card-title mt-[18px]">{{ $item->name }}</p>
+                                </a>
                             </a>
-                        </a>
-                    </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
 
+            {{-- Slider Mobile --}}
             <div class="swiper eXSwiperMobile mt-[50px] pb-[100px] lg:hidden">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide card h-[200px] bg-white shadow-xl items-center justify-cente">
@@ -252,145 +261,84 @@
             <div class="mx-auto max-w-screen-xl mt-[50px] lg:mt-[100px]">
                 <div class="lg:flex lg:justify-between lg:pb-[100px]">
                     <div class="lg:w-[820px] lg:flex pb-[75px] lg:pb-0">
-                        <div class="lg:mr-[48px] mt-[80px] lg:mt-0">
-                            <div
-                                class="h-[300px] w-[310px] lg:h-[390px] lg:w-[365px] bg-[#004C77] rounded-[20px] left-[20px] relative lg:left-[23px] lg:top-[23px]">
-                                <div class="absolute -left-[15px] lg:-left-[23px] -top-[23px]">
-                                    <img class="h-[300px] w-[310px] lg:h-[390px] lg:w-[365px] rounded-[20px] "
-                                        src="images/video.png" alt="">
-                                </div>
-                            </div>
-                            <div class="mt-[30px] lg:mt-[50px] lg:max-w-[385px]">
-                                <p class="text-[20px] lg:text-[24px] font-[500] ">Siswa SMK Negeri 1 Garut raih juara
-                                    Nasional!!!
-                                </p>
-                                <p
-                                    class="text-justify font-inter font-[400] text-[14px] lg:text-[16px] mt-[10px] lg:mt-[20px]">
-                                    Lorem
-                                    ipsum dolor
-                                    sit amet
-                                    consectetur
-                                    adipisicing elit. Possimus
-                                    deserunt eligendi
-                                    quibusdam amet? Aliquid quaerat ipsa exercitationem maiores distinctio explicabo
-                                    nemo, ab quae est quam, quo eaque, ut earum nisi!</p>
+                        <?php $count = 0; ?>
+                        @foreach ($blogs as $item)
+                            <?php if ($count == 2) {
+                                break;
+                            } ?>
+                            <a href="/berita/{{ $item->title }}">
+                                <div class="lg:mr-[48px] mt-[80px] lg:mt-0">
+                                    <div
+                                        class="h-[300px] w-[310px] lg:h-[390px] lg:w-[365px] bg-[#004C77] rounded-[20px] left-[20px] relative lg:left-[23px] lg:top-[23px]">
+                                        <div class="absolute -left-[15px] lg:-left-[23px] -top-[23px]">
+                                            <img class="h-[300px] w-[310px] lg:h-[390px] lg:w-[365px] rounded-[20px] "
+                                                src="images/video.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="mt-[30px] lg:mt-[50px] lg:max-w-[385px]">
+                                        <p class="text-[20px] lg:text-[24px] font-[500] ">
+                                            {!! Str::limit($item->content, 50, ' ...') !!}
+                                        </p>
+                                        <p
+                                            class="text-justify font-inter font-[400] text-[14px] lg:text-[16px] mt-[10px] lg:mt-[20px]">
+                                            {!! Str::words($item->content, 25, ' ...') !!}
+                                        </p>
 
-                                <a href="#" class="inline-flex items-center mt-[20px] lg:mt-[30px]">
-                                    <div class="w-[30px] h-[30px] lg:w-[52px] lg:h-[52px]">
-                                        <img class="rounded-full" src="images/major/sij.png" alt="">
+                                        <a href="#" class="inline-flex items-center mt-[20px] lg:mt-[30px]">
+                                            <div class="w-[30px] h-[30px] lg:w-[52px] lg:h-[52px]">
+                                                <img class="rounded-full" src="images/major/sij.png" alt="">
+                                            </div>
+                                            <div class="text-left ml-[10px] lg:ml-[14px]">
+                                                <div class="-mt-1 font-sans text-sm font-semibold">{{ $item->author }}
+                                                </div>
+                                                <div class="mb-1 text-xs">{{ $item->published_at }}</div>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="text-left ml-[10px] lg:ml-[14px]">
-                                        <div class="-mt-1 font-sans text-sm font-semibold">Admin</div>
-                                        <div class="mb-1 text-xs">23 Juni 2023</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="lg:mr-[48px] mt-[80px] lg:mt-0">
-                            <div
-                                class="h-[300px] w-[310px] lg:h-[390px] lg:w-[365px] bg-[#004C77] rounded-[20px] left-[20px] relative lg:left-[23px] lg:top-[23px]">
-                                <div class="absolute -left-[15px] lg:-left-[23px] -top-[23px]">
-                                    <img class="h-[300px] w-[310px] lg:h-[390px] lg:w-[365px] rounded-[20px] "
-                                        src="images/video.png" alt="">
                                 </div>
-                            </div>
-                            <div class="mt-[30px] lg:mt-[50px] lg:max-w-[385px]">
-                                <p class="text-[20px] lg:text-[24px] font-[500] ">Siswa SMK Negeri 1 Garut raih juara
-                                    Nasional!!!
-                                </p>
-                                <p
-                                    class="text-justify font-inter font-[400] text-[14px] lg:text-[16px] mt-[10px] lg:mt-[20px]">
-                                    Lorem
-                                    ipsum dolor
-                                    sit amet
-                                    consectetur
-                                    adipisicing elit. Possimus
-                                    deserunt eligendi
-                                    quibusdam amet? Aliquid quaerat ipsa exercitationem maiores distinctio explicabo
-                                    nemo, ab quae est quam, quo eaque, ut earum nisi!</p>
+                            </a>
 
-                                <a href="#" class="inline-flex items-center mt-[20px] lg:mt-[30px]">
-                                    <div class="w-[30px] h-[30px] lg:w-[52px] lg:h-[52px]">
-                                        <img class="rounded-full" src="images/major/sij.png" alt="">
-                                    </div>
-                                    <div class="text-left ml-[10px] lg:ml-[14px]">
-                                        <div class="-mt-1 font-sans text-sm font-semibold">Admin</div>
-                                        <div class="mb-1 text-xs">23 Juni 2023</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                            <?php $count++; ?>
+                        @endforeach
                     </div>
                     <div class="lg:w-[288px] lg:inline hidden">
-                        <div class="flex justify-between items-center pb-[39px] mb-[39px] border-b-gray-400 border-b-2 ">
-                            <div class="lg:max-w-[130px]">
-                                <p class="lg:text-[18px] font-[500] ">Siswa SMK Negeri 1 Garut raih juara Nasional!
-                                </p>
+                        <?php $count = 0; ?>
+                        @foreach ($blogs as $item)
+                            <?php if ($count == 3) {
+                                break;
+                            } ?>
+                            <a href="/berita/{{ $item->title }}">
+                                <div
+                                    class="flex justify-between items-center pb-[39px] mb-[39px] border-b-gray-400 border-b-2 ">
+                                    <div class="lg:max-w-[130px]">
+                                        <p class="lg:text-[18px] font-[500] ">
+                                            {!! Str::limit($item->title, 10, ' ...') !!}
+                                        </p>
 
-                                <a href="#" class="inline-flex items-center lg:mt-[10px]">
-                                    <div class="lg:w-[30px] lg:h-[30px]">
-                                        <img class="rounded-full" src="images/major/sij.png" alt="">
+                                        <a href="/berita/{{ $item->title }}"
+                                            class="inline-flex items-center lg:mt-[10px]">
+                                            <div class="lg:w-[30px] lg:h-[30px]">
+                                                <img class="rounded-full" src="images/major/sij.png" alt="">
+                                            </div>
+                                            <div class="text-left lg:ml-[11px]">
+                                                <div class="-mt-1 text-sm font-[500] text-[14px]">
+                                                    {!! Str::words($item->author, 2, '...') !!}
+                                                </div>
+                                                <div class="mb-1 text-xs">{{ $item->published_at }}</div>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="text-left lg:ml-[11px]">
-                                        <div class="-mt-1 text-sm font-[500] text-[14px]">Admin</div>
-                                        <div class="mb-1 text-xs">23 Juni 2023</div>
+                                    <div
+                                        class="lg:w-[130px] lg:h-[130px] bg-[#004C77] rounded-[20px] relative left-[8px] top-[8px]">
+                                        <div class="absolute -left-[8px] -top-[8px]">
+                                            <img class="lg:w-[]130px] lg:h-[130px] rounded-[20px] " src="images/video.png"
+                                                alt="">
+                                        </div>
                                     </div>
-                                </a>
-                            </div>
-                            <div
-                                class="lg:w-[130px] lg:h-[130px] bg-[#004C77] rounded-[20px] relative left-[8px] top-[8px]">
-                                <div class="absolute -left-[8px] -top-[8px]">
-                                    <img class="lg:w-[]130px] lg:h-[130px] rounded-[20px] " src="images/video.png"
-                                        alt="">
                                 </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center pb-[39px] mb-[39px] border-b-gray-400 border-b-2 ">
-                            <div class="lg:max-w-[130px]">
-                                <p class="lg:text-[18px] font-[500] ">Siswa SMK Negeri 1 Garut raih juara Nasional!
-                                </p>
-
-                                <a href="#" class="inline-flex items-center lg:mt-[10px]">
-                                    <div class="lg:w-[30px] lg:h-[30px]">
-                                        <img class="rounded-full" src="images/major/sij.png" alt="">
-                                    </div>
-                                    <div class="text-left lg:ml-[11px]">
-                                        <div class="-mt-1 text-sm font-[500] text-[14px]">Admin</div>
-                                        <div class="mb-1 text-xs">23 Juni 2023</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div
-                                class="lg:w-[130px] lg:h-[130px] bg-[#004C77] rounded-[20px] relative left-[8px] top-[8px]">
-                                <div class="absolute -left-[8px] -top-[8px]">
-                                    <img class="lg:w-[]130px] lg:h-[130px] rounded-[20px] " src="images/video.png"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center pb-[39px] mb-[39px] border-b-gray-400 border-b-2 ">
-                            <div class="lg:max-w-[130px]">
-                                <p class="lg:text-[18px] font-[500] ">Siswa SMK Negeri 1 Garut raih juara Nasional!
-                                </p>
-
-                                <a href="#" class="inline-flex items-center lg:mt-[10px]">
-                                    <div class="lg:w-[30px] lg:h-[30px]">
-                                        <img class="rounded-full" src="images/major/sij.png" alt="">
-                                    </div>
-                                    <div class="text-left lg:ml-[11px]">
-                                        <div class="-mt-1 text-sm font-[500] text-[14px]">Admin</div>
-                                        <div class="mb-1 text-xs">23 Juni 2023</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div
-                                class="lg:w-[130px] lg:h-[130px] bg-[#004C77] rounded-[20px] relative left-[8px] top-[8px]">
-                                <div class="absolute -left-[8px] -top-[8px]">
-                                    <img class="lg:w-[]130px] lg:h-[130px] rounded-[20px] " src="images/video.png"
-                                        alt="">
-                                </div>
-                            </div>
-                        </div>
+                            </a>
+                            <?php $count++; ?>
+                        @endforeach
                     </div>
                 </div>
             </div>

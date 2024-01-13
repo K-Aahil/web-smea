@@ -17,24 +17,14 @@
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">SMK Negeri 1 Garut</h2>
             </div>
             <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
-                <div class="text-center text-gray-500 shadow-lg rounded-lg p-6">
-                    <img class="mx-auto mb-4 w-56 h-64 rounded-lg" src="images/major/sij.png" alt="Bonnie Avatar">
-                    <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        <a href="#">Pengembangan Perangkat Lunak dan Gim</a>
-                    </h3>
-                </div>
-                <div class="text-center text-gray-500 shadow-lg rounded-lg p-6">
-                    <img class="mx-auto mb-4 w-56 h-64 rounded-lg" src="images/major/mtm.png" alt="Bonnie Avatar">
-                    <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        <a href="#">Desain Komunikasi Visual</a>
-                    </h3>
-                </div>
-                <div class="text-center text-gray-500 shadow-lg rounded-lg p-6">
-                    <img class="mx-auto mb-4 w-56 h-64 rounded-lg" src="images/major/fkk.png" alt="Bonnie Avatar">
-                    <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        <a href="#">Teknik Farmasi</a>
-                    </h3>
-                </div>
+                @foreach ($jurusan as $major)
+                    <div class="text-center text-gray-500 shadow-lg rounded-lg p-6">
+                        <img class="mx-auto mb-4 w-56 h-64 rounded-lg" src="images/major/sij.png" alt="Bonnie Avatar">
+                        <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                            <a href="/kompetensi-keahlian/{{ $major->name }}">{{ $major->name }}</a>
+                        </h3>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
